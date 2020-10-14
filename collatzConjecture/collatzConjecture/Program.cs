@@ -10,19 +10,19 @@ namespace collatzConjecture
     {
         static void Main(string[] args)
         {
+            //Get it? Keeps running, and running, and running.....
             bool forestGump = true;
 
             while (forestGump == true)
             {
-                int startingNum = 0;
-                int iterCount = 0;
-                int evenCount = 0;
-                int oddCount = 0;
+                //Increased to be 64-bit Integer, just don't use 9223372036854775804... It might go over and flip to negative and repeat forever.
+                Int64 startingNum, iterCount, evenCount, oddCount;
+                startingNum = iterCount = evenCount = oddCount = 0;
                 double evenbyodd = 0.0;
                 double startbyiter = 0.0;
 
                 Console.WriteLine("Enter a number (Enter 0 to exit): ");
-                startingNum = Convert.ToInt32(Console.ReadLine());
+                startingNum = Convert.ToInt64(Console.ReadLine());
                 if (startingNum == 0)
                 {
                     Environment.Exit(0);
